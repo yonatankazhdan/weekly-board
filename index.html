@@ -178,7 +178,7 @@ function render(rows) {
 
 document.body.insertAdjacentHTML("beforeend", `
 <div class="wrap" dir="rtl">
-  <div class="top"><h1>לוח תכנון קדימה</h1><div class="tools"><a class="save" id="edit" href="https://docs.google.com/spreadsheets/d/10eF15grg6OGNVDRzdUrx37rZHY2V9jRKB0lvMra7sOY/edit" target="_blank" rel="noopener" hidden>עריכה</a><div class="status" id="status">טוען…</div></div></div>
+  <div class="top"><h1>לוח תכנון קדימה</h1><div class="tools"><a class="save" id="edit" href="https://docs.google.com/spreadsheets/d/10eF15grg6OGNVDRzdUrx37rZHY2V9jRKB0lvMra7sOY/edit" target="_blank" rel="noopener">עריכה</a><div class="status" id="status">טוען…</div></div></div>
   <div class="frame"><div class="scroll"><table>
     <colgroup><col class="c-week"><col class="c-blue"><col class="c-fight"><col><col></colgroup>
     <thead><tr><th>שבוע</th><th>כחולה</th><th>לוחמים</th><th>הכשרות נוספות</th><th>הערות</th></tr></thead>
@@ -186,12 +186,7 @@ document.body.insertAdjacentHTML("beforeend", `
   </table></div></div>
 </div>`);
 
-// The edit button shows only on a device that once opened this page with #edit (the owner's phone).
-try {
-  if (location.hash === "#edit") { localStorage.setItem("boardEditor", "1"); history.replaceState(null, "", location.pathname); }
-  if (localStorage.getItem("boardEditor") === "1") document.getElementById("edit").hidden = false;
-} catch (e) {}
-
+// "עריכה" opens the Google Sheet; only the owner's Google accounts can edit it, anyone else is asked to request access.
 const saved = JSON.parse(document.getElementById("board-data").textContent);
 const FIRST_SUNDAY = new Date(2026, 9, 25);
 render(NUMS.map((n, i) => {
