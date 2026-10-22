@@ -1,8 +1,5 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style><meta name="robots" content="noindex, nofollow"></head><body>
-<title>לוח תכנון קדימה</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&family=Rubik:wght@400;500;600&display=swap">
-<style id="board-style">
+<!doctype html><html lang="he"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="robots" content="noindex, nofollow"><title>לוח תכנון קדימה</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&family=Rubik:wght@400;500;600&display=swap"><style>:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+<style>
 /* Layout: one whiteboard in a wooden frame; 5-column RTL grid, one row per week, current week marked */
 :root {
   --bg: #e9ecef;
@@ -102,194 +99,107 @@ tr.now td { background: var(--now); }
   .wk em { font-size: .55rem; letter-spacing: 0; }
   .cell { min-height: 56px; padding: 4px; font-size: .68rem; line-height: 1.35; }
 }
-</style>
+</style></head><body>
 <script type="application/json" id="board-data">{"w00_44": {"blue": "# מסכם ייעודי\nכל הסדיר + \nרוקו, נח, מימון.", "fighters": "# שחורה\n—", "notes": "# אלפ\"צ קמ\"ג", "training": ""}, "w01_45": {"blue": "# מסכם אופרטיבי\n* מדריכים מהקומנדו\nמירון", "fighters": "# ורודה\nברגיג\nברנץ (ד')\nמירון (ג'–ה')", "notes": "צרפתי טס בשישי\n# אל\"ת סגולה\n# אל\"ת תכלת", "training": "# הקמה מבצעית\n# מדור (א'–ה')\nכולם!\nמימון"}, "w02_46": {"blue": "# הכנת סגל\nקשדן\nמימון", "fighters": "# אדומה (א'–ב')\nלפי דרישה יש מ-6217\n\n# לכידות יחידה באשקלון (ג'–ה')", "notes": "צרפתי בחו״ל\n# אל\"ת תכלת\nחוגג בחופש", "training": "# הכשרת סמלים\nזיו, אליעז"}, "w03_47": {"blue": "# קליטה ולוחמה\nברנץ, חטיאל, חוגג\nנח, מימון, דורנץ", "fighters": "# סדרי בראשית יחידתי\n# אימון מפקדים\nקשדן, אליעז, מימון", "notes": "צרפתי בחו״ל\nחזרה לעתיד: זיו, עמית, תלם, גולן", "training": "# אקדח לוט״ר\nאליעז"}, "w04_48": {"blue": "# ירי ולוחמה 1\nתלם, בנג׳ה, גולן\nברנץ, חטיאל, חוגג\nנח, רוקו?", "fighters": "# שבוע אופרטיבי יחידתי\nצריך פה כמה חברה!\nנראה מי נבחר...", "notes": "צרפתי בחו״ל", "training": "# הכשרת לוחם מדור ירי\nמימון"}, "w05_49": {"blue": "—", "fighters": "# בלעדי מאלא\nכולם", "notes": "צרפתי בחו״ל\nברנץ מתחפשש", "training": "# הכשרת לוחם מדור סגירות\nברגיג? "}, "w06_50": {"blue": "# ירי ולוחמה 2\nתלם, בנג׳ה, גולן, חטיאל, חוגג\nנח", "fighters": "# שחורה\nע״פ צורך צריך לזמן עוד", "notes": "צרפתי בחו״ל", "training": "# הכשרת לוחם מדור פנים מבנה\nמימון"}, "w07_51": {"blue": "# לחימה מאובטחת\n*חטיאל, חוגג, גולן, רחמיאן\nנח, עוד 1?", "fighters": "# ורודה\n*צרפתי\nתלם", "notes": "טסים ברביעי: תלם, גולן, עמית, זיו ", "training": "# הכשרת לוחם מדור שת״פ אפור\nמימון"}, "w08_52": {"blue": "# פריצה דינאמית", "fighters": "# אדומה", "notes": "", "training": ""}, "w09_1": {"blue": "# פריצה סריקה", "fighters": "# שחורה", "notes": "", "training": ""}, "w10_2": {"blue": "# תנ״מ וסגירות חולייה", "fighters": "# ורודה", "notes": "", "training": ""}, "w11_3": {"blue": "# סגירה סיר לחץ", "fighters": "# אדומה", "notes": "", "training": ""}, "w12_4": {"blue": "# סגירה פריצה", "fighters": "# שחורה", "notes": "", "training": ""}, "w13_5": {"blue": "# שת״פ 500 וחו״ע", "fighters": "# ורודה", "notes": "", "training": ""}, "w14_6": {"blue": "# פח״ע והו״פ", "fighters": "# אדומה", "notes": "", "training": ""}, "w15_7": {"blue": "# הובלה פריקה", "fighters": "# שחורה", "notes": "", "training": ""}, "w16_8": {"blue": "# קנה פריקה", "fighters": "# ורודה", "notes": "", "training": ""}, "w17_9": {"blue": "# מסכם ייעודי", "fighters": "# אדומה", "notes": "", "training": ""}, "w18_10": {"blue": "# מסכם אופרטיבי", "fighters": "# שחורה", "notes": "", "training": ""}}</script>
-<script id="app">
-// The board's data lives in #board-data inside this page. Only an editor of the artifact can change it:
-// "שמור" republishes the whole page with the new data, and everyone who opens the link sees that version.
-const FIELDS = ["blue", "fighters", "training", "notes"];
+<script>
+// Reads the board from the published Google Sheet (one row per week: שבוע, תאריכים, כחולה, לוחמים, הכשרות נוספות, הערות).
+// A line that starts with "#" is red, every other line is green. If the sheet can't be reached, the copy saved in this page is shown.
+const SHEET_CSV = "https://docs.google.com/spreadsheets/d/e/2PACX-1vSdwtqsOVbj6W77kvxac8cGOEmvkst015DrfkYVc0soskboiDTG3qMpMB40JayCHUpv6m2Rt9PM2zCP/pub?output=csv";
 const NUMS = [44,45,46,47,48,49,50,51,52,1,2,3,4,5,6,7,8,9,10];
-const FIRST_SUNDAY = new Date(2026, 9, 25);
-const HEAD = `<title>לוח תכנון קדימה</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Karantina:wght@700&family=Rubik:wght@400;500;600&display=swap">
-`;
-const SKELETON = '<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>';
+const FIELDS = ["blue", "fighters", "training", "notes"];
 
-const data = JSON.parse(document.getElementById("board-data").textContent);
+function parseCSV(text) {
+  const rows = []; let row = [], cell = "", q = false;
+  for (let i = 0; i < text.length; i++) {
+    const ch = text[i];
+    if (q) {
+      if (ch === '"') { if (text[i + 1] === '"') { cell += '"'; i++; } else q = false; }
+      else cell += ch;
+    } else if (ch === '"') q = true;
+    else if (ch === ",") { row.push(cell); cell = ""; }
+    else if (ch === "\n" || ch === "\r") {
+      if (ch === "\r" && text[i + 1] === "\n") i++;
+      row.push(cell); rows.push(row); row = []; cell = "";
+    } else cell += ch;
+  }
+  if (cell || row.length) { row.push(cell); rows.push(row); }
+  return rows;
+}
 
-document.body.insertAdjacentHTML("beforeend", `
-<div class="wrap" dir="rtl">
-  <div class="top">
-    <h1>לוח תכנון קדימה</h1>
-    <div class="tools">
-      <button class="tog" id="tog" type="button" title="Ctrl/⌘+B" hidden>שורה: אדום / <span>ירוק</span></button>
-      <button class="save" id="save" type="button" disabled hidden>שמור</button>
-      <div class="status" id="status"></div>
-    </div>
-  </div>
-  <div class="frame">
-    <div class="scroll">
-      <table>
-        <colgroup><col class="c-week"><col class="c-blue"><col class="c-fight"><col><col></colgroup>
-        <thead><tr><th>שבוע</th><th>כחולה</th><th>לוחמים</th><th>הכשרות נוספות</th><th>הערות</th></tr></thead>
-        <tbody id="rows"></tbody>
-      </table>
-    </div>
-  </div>
-  <p class="hint" id="hint" hidden>לוחצים על משבצת וכותבים. שורה חדשה יוצאת בירוק; כדי להפוך שורה לאדום עומדים עליה ולוחצים על הכפתור למעלה או Ctrl/⌘+B. בסוף לוחצים "שמור".</p>
-</div>`);
+// Week number as on the board: weeks run Sunday to Saturday, and the week that holds 1 January is week 1.
+function boardWeek(d) {
+  const sun = new Date(d.getFullYear(), d.getMonth(), d.getDate() - d.getDay());
+  const sat = new Date(sun); sat.setDate(sat.getDate() + 6);
+  if (sat.getFullYear() > sun.getFullYear()) return 1;
+  const jan1 = new Date(sun.getFullYear(), 0, 1);
+  const firstSun = new Date(jan1); firstSun.setDate(1 - jan1.getDay());
+  return Math.round((sun - firstSun) / 6048e5) + 1;
+}
 
-const weeks = NUMS.map((n, i) => {
-  const sun = new Date(FIRST_SUNDAY); sun.setDate(sun.getDate() + i * 7);
-  const thu = new Date(sun); thu.setDate(thu.getDate() + 4);
-  const next = new Date(sun); next.setDate(next.getDate() + 7);
-  const range = sun.getMonth() === thu.getMonth()
-    ? `${sun.getDate()}–${thu.getDate()}/${thu.getMonth() + 1}`
-    : `${sun.getDate()}/${sun.getMonth() + 1}–${thu.getDate()}/${thu.getMonth() + 1}`;
-  return { id: "w" + String(i).padStart(2, "0") + "_" + n, n, range, sun, next };
-});
-
-const statusEl = document.getElementById("status");
-const tbody = document.getElementById("rows");
-const now = new Date();
-
-// Stored text: one line per row; a line starting with "# " is red, any other line is green.
 function fill(c, text) {
   c.textContent = "";
-  if (!text) return;
-  for (const line of text.split("\n")) {
+  for (const line of (text || "").split("\n")) {
     const d = document.createElement("div");
-    const red = line.startsWith("# ");
+    const red = line.startsWith("#");
     if (red) d.className = "r";
-    const t = red ? line.slice(2) : line;
+    const t = red ? line.replace(/^#\s*/, "") : line;
     if (t) d.textContent = t; else d.appendChild(document.createElement("br"));
     c.appendChild(d);
   }
-}
-function serialize(c) {
-  const lines = [];
-  for (const n of c.childNodes) {
-    const red = n.nodeType === 1 && n.classList.contains("r");
-    const txt = n.nodeType === 1 ? n.innerText : n.textContent;
-    for (const l of txt.replace(/\n$/, "").split("\n")) lines.push((red ? "# " : "") + l);
-  }
-  while (lines.length && /^(# )?$/.test(lines[lines.length - 1])) lines.pop();
-  return lines.join("\n");
+  if (!text) c.textContent = "";
 }
 
-for (const w of weeks) {
-  const tr = document.createElement("tr");
-  if (now >= w.sun && now < w.next) tr.className = "now";
-  const wk = document.createElement("td");
-  wk.innerHTML = `<div class="wk"><b>${w.n}</b><span dir="ltr">${w.range}</span>${tr.className ? "<em>השבוע</em>" : ""}</div>`;
-  tr.appendChild(wk);
-  for (const f of FIELDS) {
-    const td = document.createElement("td");
-    const c = document.createElement("div");
-    c.className = "cell " + f;
-    c.id = `${w.id}-${f}`;
-    c.dataset.week = w.id; c.dataset.field = f;
-    c.contentEditable = "false";
-    c.spellcheck = false;
-    c.setAttribute("autocorrect", "off");
-    c.setAttribute("autocapitalize", "off");
-    c.setAttribute("autocomplete", "off");
-    c.setAttribute("writingsuggestions", "false");
-    fill(c, (data[w.id] && data[w.id][f]) || "");
-    td.appendChild(c); tr.appendChild(td);
-  }
-  tbody.appendChild(tr);
-}
-
-function currentLine() {
-  const sel = getSelection();
-  if (!sel.rangeCount) return null;
-  let n = sel.anchorNode;
-  const cell = n && (n.nodeType === 1 ? n : n.parentElement).closest(".cell");
-  if (!cell) return null;
-  if (n === cell) n = cell.childNodes[Math.min(sel.anchorOffset, cell.childNodes.length - 1)];
-  while (n && n.parentNode !== cell) n = n.parentNode;
-  if (!n) return null;
-  if (n.nodeType !== 1) {
-    const d = document.createElement("div");
-    cell.insertBefore(d, n); d.appendChild(n);
-    const r = document.createRange(); r.setStart(n, n.textContent.length); r.collapse(true);
-    sel.removeAllRanges(); sel.addRange(r);
-    n = d;
-  }
-  return { cell, line: n };
-}
-
-function buildPage(state) {
-  const json = JSON.stringify(state).replace(/</g, "\\u003c");
-  const style = document.getElementById("board-style").textContent;
-  const app = document.getElementById("app").textContent;
-  return SKELETON + HEAD + "<style id=\"board-style\">" + style + "</style>\n"
-    + "<script type=\"application/json\" id=\"board-data\">" + json + "<\/script>\n"
-    + "<script id=\"app\">" + app + "<\/script>\n</body></html>";
-}
-
-(async () => {
-  const user = await window.claude?.use?.("user");
-  const canEdit = user ? await user.canEdit().catch(() => false) : false;
-  if (!canEdit) return;
-  const artifact = await window.claude.use("artifact");
-  if (!artifact) return;
-
-  const saveBtn = document.getElementById("save");
-  const tog = document.getElementById("tog");
-  saveBtn.hidden = false; tog.hidden = false; document.getElementById("hint").hidden = false;
-  let dirty = false;
-  const markDirty = () => { dirty = true; saveBtn.disabled = false; statusEl.textContent = "יש שינויים שלא נשמרו"; };
-
-  saveBtn.addEventListener("click", async () => {
-    const state = {};
-    for (const w of weeks) {
-      state[w.id] = {};
-      for (const f of FIELDS) state[w.id][f] = serialize(document.getElementById(`${w.id}-${f}`));
+function render(rows) {
+  const tbody = document.getElementById("rows");
+  tbody.textContent = "";
+  const nowWeek = String(boardWeek(new Date()));
+  let marked = false;
+  for (const r of rows) {
+    if (!r[0] || !r[0].trim()) continue;
+    const tr = document.createElement("tr");
+    const isNow = !marked && r[0].trim() === nowWeek;
+    if (isNow) { tr.className = "now"; marked = true; }
+    const wk = document.createElement("td");
+    wk.innerHTML = '<div class="wk"><b></b><span dir="ltr"></span>' + (isNow ? "<em>השבוע</em>" : "") + "</div>";
+    wk.querySelector("b").textContent = r[0].trim();
+    wk.querySelector("span").textContent = (r[1] || "").trim();
+    tr.appendChild(wk);
+    for (let k = 2; k < 6; k++) {
+      const td = document.createElement("td");
+      const c = document.createElement("div");
+      c.className = "cell";
+      fill(c, (r[k] || "").replace(/\s+$/, ""));
+      td.appendChild(c); tr.appendChild(td);
     }
-    saveBtn.disabled = true;
-    statusEl.textContent = "שומר…";
-    try {
-      await artifact.publish(buildPage(state));
-      dirty = false;
-      statusEl.textContent = "נשמר";
-    } catch (e) {
-      saveBtn.disabled = false;
-      statusEl.textContent = e && e.code === "conflict" ? "גרסה חדשה נטענת — ערוך שוב" : "השמירה נכשלה, נסה שוב";
-    }
-  });
-  addEventListener("beforeunload", e => { if (dirty) e.preventDefault(); });
+    tbody.appendChild(tr);
+  }
+}
 
-  function toggleRed() {
-    const at = currentLine();
-    if (!at) return;
-    at.line.classList.toggle("r");
-    markDirty();
-  }
-  tog.addEventListener("mousedown", e => e.preventDefault());
-  tog.addEventListener("click", toggleRed);
-  for (const c of document.querySelectorAll(".cell")) {
-    c.contentEditable = "true";
-    c.addEventListener("input", markDirty);
-    c.addEventListener("keydown", e => {
-      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "b") { e.preventDefault(); toggleRed(); }
-      else if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "s") { e.preventDefault(); if (dirty) saveBtn.click(); }
-      else if (e.key === "Enter" && !e.shiftKey) {
-        e.preventDefault();
-        if (!currentLine() && !c.firstChild) c.appendChild(document.createElement("div")).appendChild(document.createElement("br"));
-        document.execCommand("insertParagraph");
-        const at = currentLine();
-        if (at) at.line.classList.remove("r");
-        markDirty();
-      }
-    });
-    c.addEventListener("paste", e => {
-      e.preventDefault();
-      document.execCommand("insertText", false, e.clipboardData.getData("text/plain"));
-    });
-  }
-})();
+document.body.insertAdjacentHTML("beforeend", `
+<div class="wrap" dir="rtl">
+  <div class="top"><h1>לוח תכנון קדימה</h1><div class="status" id="status">טוען…</div></div>
+  <div class="frame"><div class="scroll"><table>
+    <colgroup><col class="c-week"><col class="c-blue"><col class="c-fight"><col><col></colgroup>
+    <thead><tr><th>שבוע</th><th>כחולה</th><th>לוחמים</th><th>הכשרות נוספות</th><th>הערות</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div></div>
+</div>`);
+
+const saved = JSON.parse(document.getElementById("board-data").textContent);
+const FIRST_SUNDAY = new Date(2026, 9, 25);
+render(NUMS.map((n, i) => {
+  const sun = new Date(FIRST_SUNDAY); sun.setDate(sun.getDate() + i * 7);
+  const thu = new Date(sun); thu.setDate(thu.getDate() + 4);
+  const range = sun.getMonth() === thu.getMonth()
+    ? `${sun.getDate()}–${thu.getDate()}/${thu.getMonth() + 1}`
+    : `${sun.getDate()}/${sun.getMonth() + 1}–${thu.getDate()}/${thu.getMonth() + 1}`;
+  const d = saved["w" + String(i).padStart(2, "0") + "_" + n] || {};
+  return [String(n), range, ...FIELDS.map(f => d[f] || "")];
+}));
+
+fetch(SHEET_CSV + "&t=" + Date.now(), { cache: "no-store" })
+  .then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+  .then(t => { render(parseCSV(t).slice(1)); document.getElementById("status").textContent = ""; })
+  .catch(() => { document.getElementById("status").textContent = "מוצג עותק שמור"; });
 </script>
 </body></html>
