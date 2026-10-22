@@ -99,6 +99,7 @@ tr.now td { background: var(--now); }
   .wk em { font-size: .55rem; letter-spacing: 0; }
   .cell { min-height: 56px; padding: 4px; font-size: .68rem; line-height: 1.35; }
 }
+a.save { text-decoration: none; display: inline-block; }
 </style></head><body>
 <script type="application/json" id="board-data">{"w00_44": {"blue": "# מסכם ייעודי\nכל הסדיר + \nרוקו, נח, מימון.", "fighters": "# שחורה\n—", "notes": "# אלפ\"צ קמ\"ג", "training": ""}, "w01_45": {"blue": "# מסכם אופרטיבי\n* מדריכים מהקומנדו\nמירון", "fighters": "# ורודה\nברגיג\nברנץ (ד')\nמירון (ג'–ה')", "notes": "צרפתי טס בשישי\n# אל\"ת סגולה\n# אל\"ת תכלת", "training": "# הקמה מבצעית\n# מדור (א'–ה')\nכולם!\nמימון"}, "w02_46": {"blue": "# הכנת סגל\nקשדן\nמימון", "fighters": "# אדומה (א'–ב')\nלפי דרישה יש מ-6217\n\n# לכידות יחידה באשקלון (ג'–ה')", "notes": "צרפתי בחו״ל\n# אל\"ת תכלת\nחוגג בחופש", "training": "# הכשרת סמלים\nזיו, אליעז"}, "w03_47": {"blue": "# קליטה ולוחמה\nברנץ, חטיאל, חוגג\nנח, מימון, דורנץ", "fighters": "# סדרי בראשית יחידתי\n# אימון מפקדים\nקשדן, אליעז, מימון", "notes": "צרפתי בחו״ל\nחזרה לעתיד: זיו, עמית, תלם, גולן", "training": "# אקדח לוט״ר\nאליעז"}, "w04_48": {"blue": "# ירי ולוחמה 1\nתלם, בנג׳ה, גולן\nברנץ, חטיאל, חוגג\nנח, רוקו?", "fighters": "# שבוע אופרטיבי יחידתי\nצריך פה כמה חברה!\nנראה מי נבחר...", "notes": "צרפתי בחו״ל", "training": "# הכשרת לוחם מדור ירי\nמימון"}, "w05_49": {"blue": "—", "fighters": "# בלעדי מאלא\nכולם", "notes": "צרפתי בחו״ל\nברנץ מתחפשש", "training": "# הכשרת לוחם מדור סגירות\nברגיג? "}, "w06_50": {"blue": "# ירי ולוחמה 2\nתלם, בנג׳ה, גולן, חטיאל, חוגג\nנח", "fighters": "# שחורה\nע״פ צורך צריך לזמן עוד", "notes": "צרפתי בחו״ל", "training": "# הכשרת לוחם מדור פנים מבנה\nמימון"}, "w07_51": {"blue": "# לחימה מאובטחת\n*חטיאל, חוגג, גולן, רחמיאן\nנח, עוד 1?", "fighters": "# ורודה\n*צרפתי\nתלם", "notes": "טסים ברביעי: תלם, גולן, עמית, זיו ", "training": "# הכשרת לוחם מדור שת״פ אפור\nמימון"}, "w08_52": {"blue": "# פריצה דינאמית", "fighters": "# אדומה", "notes": "", "training": ""}, "w09_1": {"blue": "# פריצה סריקה", "fighters": "# שחורה", "notes": "", "training": ""}, "w10_2": {"blue": "# תנ״מ וסגירות חולייה", "fighters": "# ורודה", "notes": "", "training": ""}, "w11_3": {"blue": "# סגירה סיר לחץ", "fighters": "# אדומה", "notes": "", "training": ""}, "w12_4": {"blue": "# סגירה פריצה", "fighters": "# שחורה", "notes": "", "training": ""}, "w13_5": {"blue": "# שת״פ 500 וחו״ע", "fighters": "# ורודה", "notes": "", "training": ""}, "w14_6": {"blue": "# פח״ע והו״פ", "fighters": "# אדומה", "notes": "", "training": ""}, "w15_7": {"blue": "# הובלה פריקה", "fighters": "# שחורה", "notes": "", "training": ""}, "w16_8": {"blue": "# קנה פריקה", "fighters": "# ורודה", "notes": "", "training": ""}, "w17_9": {"blue": "# מסכם ייעודי", "fighters": "# אדומה", "notes": "", "training": ""}, "w18_10": {"blue": "# מסכם אופרטיבי", "fighters": "# שחורה", "notes": "", "training": ""}}</script>
 <script>
@@ -177,13 +178,19 @@ function render(rows) {
 
 document.body.insertAdjacentHTML("beforeend", `
 <div class="wrap" dir="rtl">
-  <div class="top"><h1>לוח תכנון קדימה</h1><div class="status" id="status">טוען…</div></div>
+  <div class="top"><h1>לוח תכנון קדימה</h1><div class="tools"><a class="save" id="edit" href="https://docs.google.com/spreadsheets/d/10eF15grg6OGNVDRzdUrx37rZHY2V9jRKB0lvMra7sOY/edit" target="_blank" rel="noopener" hidden>עריכה</a><div class="status" id="status">טוען…</div></div></div>
   <div class="frame"><div class="scroll"><table>
     <colgroup><col class="c-week"><col class="c-blue"><col class="c-fight"><col><col></colgroup>
     <thead><tr><th>שבוע</th><th>כחולה</th><th>לוחמים</th><th>הכשרות נוספות</th><th>הערות</th></tr></thead>
     <tbody id="rows"></tbody>
   </table></div></div>
 </div>`);
+
+// The edit button shows only on a device that once opened this page with #edit (the owner's phone).
+try {
+  if (location.hash === "#edit") { localStorage.setItem("boardEditor", "1"); history.replaceState(null, "", location.pathname); }
+  if (localStorage.getItem("boardEditor") === "1") document.getElementById("edit").hidden = false;
+} catch (e) {}
 
 const saved = JSON.parse(document.getElementById("board-data").textContent);
 const FIRST_SUNDAY = new Date(2026, 9, 25);
